@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: hpa-nginx-service
+
+spec:
+  type: LoadBalancer
+
+  selector:
+    app: hpa-nginx
+
+  ports:
+  - port: 80
+    targetPort: 80
